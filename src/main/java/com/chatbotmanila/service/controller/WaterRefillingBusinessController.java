@@ -20,12 +20,10 @@ public class WaterRefillingBusinessController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(WaterRefillingBusinessController.class);
 
-    @Autowired
-
     @RequestMapping(value = "/water", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public Object orderWater(@Valid @RequestBody WaterRefillingBusinessJson form) {
+    public Object orderWater(@RequestBody WaterRefillingBusinessJson form) {
 
         LOGGER.info("Save and process documents of merchant with applicationId: {}" , form.getFacebookClientId());
 
