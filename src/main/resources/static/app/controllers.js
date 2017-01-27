@@ -1,5 +1,5 @@
 (function(angular) {
-   // Declaration of AppController with $scope and Item as arguements
+   // Declaration and Implementation of AppController with $scope and Item as arguements
    var AppController = function($scope, Item) {
 
         // Implements query method with a response return from ItemFactory.query using the $resource
@@ -33,9 +33,9 @@
                 $scope.items.splice($scope.items.indexOf(item), 1);
             });
         };
-    }; // End of Controller Declaration
+    }; // End of Controller Declaration and Implementation
 
-    // Implementation of AppController
+    // Usage of AppController
     // Note: For the AppController to be used you must inject the parameters needed by the controller
     AppController.$inject = ['$scope', 'Item'];
 
